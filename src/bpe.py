@@ -27,8 +27,13 @@ def init_representation(word: str) -> List[str]:
     rho_0(word): list of characters + EOW marker.
     Example: "good" -> ["g","o","o","d","</w>"]
     """
-    # TODO
-    raise NotImplementedError
+    
+    rep = []
+    for car in word :
+       rep.append(car)
+    rep.append(EOW_TOKEN)
+
+    return rep
 
 
 def merge_pair_in_sequence(seq: List[str], a: str, b: str, new_sym: str) -> List[str]:
